@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Tienda</title>
+    <meta http-equiv="Content-Type" 
+    content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <p>Welcome!</p>
+    <p th:utext="${2+3}">Texto que no se ve</p>
+    <p th:utext="${mensaje}"></p>
+    <ol>
+    	<li th:each="m:${mensajes}" 
+    		th:utext="${m}"></li>
+    </ol>
+    <ul>
+    	<li th:each="m:${mensajes}" 
+    		th:utext="${m}"></li>
+    </ul>
+  </body>
+</html>
