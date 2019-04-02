@@ -28,8 +28,11 @@ public class InMemmoryShop implements Shop {
 
 	@Override
 	public int countStock() {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = 0;
+		for(StockItem stockItem : stock) {
+			result += stockItem.quantity;
+		}
+		return result;
 	}
 
 	private static class StockItem{
